@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\admin\NoticeController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +42,9 @@ Route::get('/welcome',[PagesController::class,'welcome'])->name('welcome');
 Route::get('/about',[PagesController::class,'about'])->name('about');
 Route::get('/contact',[PagesController::class,'contact'])->name('contact');
 Route::get('/project',[PagesController::class,'project'])->name('project');
+
+
+Route::get('/notice',[NoticeController::class,'index'])->name('notice.index');
 
 
 
