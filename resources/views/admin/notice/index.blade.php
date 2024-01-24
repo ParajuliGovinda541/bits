@@ -1,9 +1,15 @@
 @extends ('layouts.app')
 
+
+@section('heading')
+Notice
+@endsection
 @section('content')
-<div class="">
-    <h1 class="text-5xl mx-10 mb-2">Notice</h1>
-    <hr class="h-2 my-2 w-full bg-black">
+
+<div class="flex justify-end">
+    <a href="{{route('notice.create')}}" class="bg-green-600 text-white px-4 py-2 rounded-lg">Add Notice</a>
 </div>
+
+
 
 @endsection

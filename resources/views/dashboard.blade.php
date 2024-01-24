@@ -5,10 +5,7 @@
 
 
     <div>
-        <div class="md:block hidden">
-            <h1 class="text-5xl mx-10 mb-2">Dashboard</h1>
-            <hr class="h-2 my-2 w-full bg-black">
-        </div>
+  
         <div class="grid md:grid-cols-3 gap-10 mx-10  text-center  ">
             <div
                 class="shadow-lg cursor-pointer bg-gradient-to-br from-red-600 to-white-950 px-10 py-5 rounded-md flex justify-between">

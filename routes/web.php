@@ -29,6 +29,25 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+
+
+
+    Route::get('/notice',[NoticeController::class,'index'])->name('notice.index');
+    Route::get('/notice/create',[NoticeController::class,'create'])->name('notice.create');
+    Route::post('/notice/store',[NoticeController::class,'store'])->name('notice.store');
+
+
+
+
+
+
+
+
+
+
+
+
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -44,7 +63,6 @@ Route::get('/contact',[PagesController::class,'contact'])->name('contact');
 Route::get('/project',[PagesController::class,'project'])->name('project');
 
 
-Route::get('/notice',[NoticeController::class,'index'])->name('notice.index');
 
 
 

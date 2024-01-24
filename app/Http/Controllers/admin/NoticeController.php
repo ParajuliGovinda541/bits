@@ -14,4 +14,26 @@ class NoticeController extends Controller
         return view('admin.notice.index');
 
     }
+
+
+    
+    public function create()
+    {
+        return view('admin.notice.create');
+
+    }
+
+    public function store( Request $request)
+    {
+        // dd($request);
+
+        $date= $request->validate([
+
+           'notice_text'=>'required',
+            'notice_date'=>"required",
+            'priority'=>"required",
+            'show'=>"required",
+        ]);
+
+    }
 }

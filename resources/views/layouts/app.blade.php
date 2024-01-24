@@ -74,19 +74,24 @@
     <div class="flex">
         <div class="w-56 h-screen bg-gray-600 shadow md:block hidden">
             <img src="{{ asset('images/logo.png') }}" class="w-full" alt="">
-            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-dashboard-3-fill"></i> Dashboard</a>
-            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-flag-fill"></i> Notice</a>
+            <a href="/dashboard" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-dashboard-3-fill"></i> Dashboard</a>
+            <a href="/notice" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-flag-fill"></i> Notice</a>
 
-            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-flag-fill"></i> Banner</a>
+            <a href="/banner" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-flag-fill"></i> Banner</a>
 
-            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-dashboard-3-fill"></i> Projects</a>
-            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-service-fill"></i> Services</a>
-            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-news-fill"></i> Blogs</a>
-            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-news-fill"></i> Contacts</a>
-            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-folder-user-fill"></i> Users</a>
-            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-logout-circle-r-fill"></i> Logouts</a>
+            <a href="/project" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-dashboard-3-fill"></i> Projects</a>
+            <a href="/service" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-service-fill"></i> Services</a>
+            <a href="/blog" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-news-fill"></i> Blogs</a>
+            <a href="/contact" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-news-fill"></i> Contacts</a>
+            <a href="/user" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-folder-user-fill"></i> Users</a>
+            <a href="/logout" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-logout-circle-r-fill"></i> Logouts</a>
         </div>
         <div class="flex-1 p-1">
+
+            <div class="md:block hidden">
+                <h1 class="text-5xl mx-10 mb-2">@yield('heading')</h1>
+                <hr class="h-2 my-2 w-full bg-black">
+            </div>
             @yield('content')
         </div>
     </div>
