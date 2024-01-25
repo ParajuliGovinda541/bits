@@ -1,11 +1,9 @@
 @extends('layouts.app')
-
+@section('heading')
+Dashboard
+@endsection
 @section('content')
-
-
-
     <div>
-  
         <div class="grid md:grid-cols-3 gap-10 mx-10  text-center  ">
             <div
                 class="shadow-lg cursor-pointer bg-gradient-to-br from-red-600 to-white-950 px-10 py-5 rounded-md flex justify-between">
@@ -66,9 +64,5 @@
                 <h1 class="text-4xl font-bold">10</h1>
             </div>
         </div>
-
     </div>
-
-
-
 @endsection
