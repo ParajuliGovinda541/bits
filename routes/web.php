@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\admin\NoticeController;
@@ -36,6 +37,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/notice/create',[NoticeController::class,'create'])->name('admin.notice.create');
     Route::post('/notice/store',[NoticeController::class,'store'])->name('admin.notice.store');
     Route::get('/notice/{id}/edit',[NoticeController::class,'edit'])->name('admin.notice.edit');
+    Route::post('/notice/{id}/update',[NoticeController::class,'update'])->name('admin.notice.update');
+    Route::get('/notice/{id}/destroy',[NoticeController::class,'destroy'])->name('admin.notice.destroy');
+
+
+
+
+
+    Route::get('/banner',[BannerController::class,'index'])->name('admin.banner.index');
+    Route::get('/banner/create',[BannerController::class,'create'])->name('admin.banner.create');
+    Route::post('/banner/store',[BannerController::class,'store'])->name('admin.banner.store');
+
 
 
 

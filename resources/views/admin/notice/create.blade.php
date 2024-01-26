@@ -11,7 +11,7 @@
         <h1 class="text-5xl justify-center flex font-bold">Notice Form</h1>
     </div>
     <div class="p-5">
-        <form action="{{route('notice.store')}}" method="POST">
+        <form action="{{route('admin.notice.store')}}" method="POST">
                 @csrf
             <div>
                 <label for="">Notice Text</label>
@@ -38,14 +38,14 @@
             <div>
                 <select name="show" id="" class= " rounded md w-full my-2">
                     <option value="1">Show</option>
-                    <option value="">Hide</option>
+                    <option value="0">Hide</option>
 
                 </select>
             </div>
             <div class="my-2 justify-center flex gap-2">
 
                 <input type="submit" class="bg-green-600 px-5 rounded-md text-white py-2">
-                <a href="{{route('notice.index')}}" class="bg-red-600 px-5 rounded-md text-white py-2"> Cancel</a>
+                <a href="{{route('admin.notice.index')}}" class="bg-red-600 px-5 rounded-md text-white py-2"> Cancel</a>
 
             </div>
 

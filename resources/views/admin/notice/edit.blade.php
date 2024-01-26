@@ -11,7 +11,7 @@
         <h1 class="text-5xl justify-center flex font-bold">Edit Notice Form</h1>
     </div>
     <div class="p-5">
-        <form action="{{route('admin.notice.store')}}" method="POST">
+        <form action="{{route('admin.notice.update',$notice->id)}}" method="POST">
                 @csrf
             <div>
                 <label for="">Notice Text</label>

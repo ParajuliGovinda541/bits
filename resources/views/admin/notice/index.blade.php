@@ -31,7 +31,7 @@
                         <td>{{ $notice->show ? 'show' : 'Hidden' }}</td>
                         <td>
                             <a href="{{route('admin.notice.edit',$notice->id)}}" class="bg-blue-600 text-xl text-white px-3 py-1 rounded-lg">Edit</a>
-                            <a href="" class="bg-red-600 text-xl text-white px-1 py-1 rounded-lg">Delete</a>
+                            <a href="{{route('admin.notice.destroy',$notice->id)}}" onclick="return confirm('Are you sure want to delete ?')" class="bg-red-600 text-xl text-white px-1 py-1 rounded-lg">Delete</a>
                         </td>
 
 
@@ -46,4 +46,5 @@
     <script>
         let table = new DataTable('#myTable');
     </script>
+
 @endsection

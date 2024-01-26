@@ -48,20 +48,40 @@ class NoticeController extends Controller
 
     }
 
-    public function edit(Request $request,$id)
+    public function edit($id)
     {
 
         $notice = Notice::find($id);
-
-        // $data= $request->validate([
-        //     'notice_text'=>'required',
-        //      'notice_date'=>"required",
-        //      'priority'=>"required|integer",
-        //      'show'=>"required",
-        //  ]);
- 
-        //  Notice::create($data);
-         
         return view('admin.notice.edit',compact('notice'));
     }
+
+
+    public function update(Request $request, $id)
+    {
+        $data= $request->validate([
+            'notice_text'=>'required',
+             'notice_date'=>"required",
+             'priority'=>"required|integer",
+             'show'=>"required",
+         ]);
+
+        $notice = Notice::find($id);
+        $notice->update($data);
+        return redirect(route('admin.notice.index',compact('notice')));
+
+
+
+
+    }
+
+    public function destroy($id)
+    {
+        $notice = Notice::find($id);
+        $notice->delete();
+
+        return redirect(route('admin.notice.index',compact('notice')));
+    }
+
+
+
 }
