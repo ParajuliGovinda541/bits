@@ -37,8 +37,8 @@
             </div>
             <div>
                 <select name="show" id="" class= " rounded md w-full my-2">
-                    <option value="1">Show</option>
-                    <option value="">Hide</option>
+                    <option value="1" {{$notice->show?'selected':''}}>Show</option>
+                    <option value="0" {{$notice->show?'':'selected'}}>Hide</option>
 
                 </select>
             </div>
@@ -52,4 +52,9 @@
         </form>
 
     </div>
+
+
+
 @endsection
+
+

@@ -15,16 +15,16 @@ Create Banner
         @csrf
     <div>
         <label for="">Banner Title</label>
-        <input type="text" placeholder="Banner Title" class="w-full rounded-lg my-2" name="banner_title">
+        <input type="text" placeholder="Banner Title" class="w-full cursor-pointer rounded-lg my-2" name="banner_title">
     </div>
     <div class="flex items-center">
         <div>
             <label for="">Banner Image</label>
-            <input type="file" placeholder="Banner Title" class="w-full  my-2" name="banner_image">
+            <input type="file" placeholder="Banner Title" class="w-full cursor-pointer  my-2" name="banner_image">
         </div>
         <div> 
             <label for="">Status</label>
-            <select name="banner_show" id="" class="w-full ">
+            <select name="banner_show" id="" class="w-full cursor-pointer ">
                 <option value="1">Show</option>
                 <option value="0">Hide</option>
 

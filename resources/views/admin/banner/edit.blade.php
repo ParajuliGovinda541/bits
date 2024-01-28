@@ -15,7 +15,7 @@
                 @csrf
             <div>
                 <label for="">Banner title</label>
-                <input name="banner_title" value="{{$banner->banner_title}}" type="text" class= " rounded md w-full my-2" >
+                <input name="banner_title" value="{{$banner->banner_title}}" type="text" class= " rounded cursor-pointer md w-full my-2" >
                 @error('banner_title')
                 <p class="text-red-500 -mt-2 text-sm">* {{$message}}</p>
                 @enderror
@@ -23,14 +23,14 @@
             </div>
             <div class="flex items-center gap-5">
                 {{-- <label for="">banner Image</label> --}}
-                <img src="{{ asset('images/banner/' . $banner->banner_image) }}" class= " rounded md w-32 my-2">
+                <img src="{{ asset('images/banner/' . $banner->banner_image) }}" class= " rounded cursor-pointer md w-32 my-2">
                 <input name="banner_image" type="file" class="rounded w-full my-2">
                 @error('banner_image')
                 <p class="text-red-500 -mt-2 text-sm">* {{$message}}</p>
                 @enderror
             </div>
             <div>
-                <select name="banner_show" id="" class= " rounded md w-full my-2">
+                <select name="banner_show" id="" class= " rounded cursor-pointer md w-full my-2">
                     <option value="1">Show</option>
                     <option value="">Hide</option>
 

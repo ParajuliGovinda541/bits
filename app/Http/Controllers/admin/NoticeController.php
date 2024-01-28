@@ -60,9 +60,9 @@ class NoticeController extends Controller
     {
         $data= $request->validate([
             'notice_text'=>'required',
-             'notice_date'=>"required",
-             'priority'=>"required|integer",
-             'show'=>"required",
+             'notice_date'=>'required',
+             'priority'=>'required|integer',
+             'show'=>'required'
          ]);
 
         $notice = Notice::find($id);
@@ -78,7 +78,6 @@ class NoticeController extends Controller
     {
         $notice = Notice::find($id);
         $notice->delete();
-
         return redirect(route('admin.notice.index',compact('notice')));
     }
 

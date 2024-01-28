@@ -44,11 +44,11 @@ class BannerController extends Controller
 
 
         public function update(Request $request,$id){
-        {
+        
             $data= $request->validate([
                 'banner_title'=>'required',
                 'banner_show'=>'required',
-                'banner_image'=>'required|mimes:jpeg,png,jpg',
+                'banner_image'=>'nullable|mimes:jpeg,png,jpg',
             ]);
 
             if($request->hasFile('banner_image'))
@@ -62,7 +62,7 @@ class BannerController extends Controller
             $banner = Banner::find($id);
             $banner->update($data);
             return redirect(route('admin.banner.index',compact('banner')));
-        }
+        }   
 
         public function edit($id)
         {    

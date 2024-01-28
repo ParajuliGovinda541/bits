@@ -48,3 +48,22 @@
     </script>
 
 @endsection
+
+<div class="flex h-full items-center inset-0 bg-blue-500 fixed backdrop-blur-3xl bg-opacity-50 hidden" id="confirmCard">
+<div class="shadow-2xl shadow-black    h-fit  w-4/12 mx-auto  p-10 relative ">
+    <h1 class="text-2xl text-center uppercase font-bold">Are You sure want to delete ?</h1>
+
+
+    <div class="text-center my-10">
+        <input class="text-xl bg-red-600 px-4 py-1 rounded-xl uppercase mr-2 text-center" type="button" value="yes">
+        <input class="text-xl bg-green-600 px-4 py-1 rounded-xl uppercase mr-2 text-center" type="button" value="no">
+    </div>
+
+</div>
+<i class="ri-close-circle-fill cursor-pointer  text-red-600 text-3xl absolute right-[500px]  top-56" id="closeBtn"></i>
+
+</div>
+
+<script>
+    var 
+</script>
