@@ -42,7 +42,7 @@ class NoticeController extends Controller
 
         // dd('created sucessfully');
 
-        return redirect(route('admin.notice.index'));
+        return redirect(route('admin.notice.index'))->with('success','Notice Created Successfully');
 
 
 
@@ -67,19 +67,21 @@ class NoticeController extends Controller
 
         $notice = Notice::find($id);
         $notice->update($data);
-        return redirect(route('admin.notice.index',compact('notice')));
+        return redirect(route('admin.notice.index',compact('notice')))->with('success','Notice Updated Successfully');
 
 
 
 
     }
 
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        $notice = Notice::find($id);
+        $notice = Notice::find($request->dataid);
         $notice->delete();
-        return redirect(route('admin.notice.index',compact('notice')));
+        return redirect(route('admin.notice.index'))->with('success','Notice Deleted Successfully');
     }
+
+    
 
 
 

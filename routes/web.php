@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\admin\NoticeController;
@@ -38,7 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/notice/store',[NoticeController::class,'store'])->name('admin.notice.store');
     Route::get('/notice/{id}/edit',[NoticeController::class,'edit'])->name('admin.notice.edit');
     Route::post('/notice/{id}/update',[NoticeController::class,'update'])->name('admin.notice.update');
-    Route::get('/notice/{id}/destroy',[NoticeController::class,'destroy'])->name('admin.notice.destroy');
+    Route::delete('/notice/destroy',[NoticeController::class,'destroy'])->name('admin.notice.destroy');
 
 
 
@@ -50,6 +51,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/banner/{id}/edit',[BannerController::class,'edit'])->name('admin.banner.edit');
     Route::post('/banner/{id}/update',[bannerController::class,'update'])->name('admin.banner.update');
     Route::get('/banner/{id}/destroy',[bannerController::class,'destroy'])->name('admin.banner.destroy');
+
+    Route::get('/category',[CategoryController::class,'index'])->name('admin.category.index');
+    Route::get('/category/create',[CategoryController::class,'create'])->name('admin.category.create');
+    Route::post('/category/store',[CategoryController::class,'store'])->name('admin.category.store');
+
+
+
 
 
 
