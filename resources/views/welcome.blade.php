@@ -23,14 +23,35 @@
             </div>
         </div>
         <div>
-            <img class="lg:w-10/12 md:w-11/12 pb-24 md:py-0" src="home.png" alt="">
+            <img class="lg:w-10/12 md:w-11/12 pb-24 md:py-0" src="{{asset('images/home.png')}}" alt="">
         </div>
 
     </section>
-    <img src="{{asset('images/home_bottom_shape.png')}}')}}" alt="" class="md:-mt-52 -mt-36 h-40 w-full md:h-56">
+    <img src="{{asset('images/home_bottom_shape.png')}}" alt="" class="md:-mt-52 -mt-36 h-40 w-full md:h-56">
 
 
     <!-- end of IT Solutions & Graphics Services Company  -->
+
+
+
+
+    <div class="flex items-center ">
+        <p class="  text-white px-2 font-bold  bg-red-600">Notice:</p>
+        <marquee behavior="" direction="" scrollamount="10" class="  text-white px-2 font-bold bg-red-400">
+            {{-- <img src="{{asset('images/home.png')}}" alt="" class=""> --}}
+
+            @foreach($notices as $notice)
+                {{$notice->notice_text}} ||
+            @endforeach
+
+        </marquee>
+    </div>
+
+
+
+
+
+
 
     <!-- start of services  -->
 

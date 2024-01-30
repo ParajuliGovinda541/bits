@@ -11,18 +11,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
-  {{-- data table links --}}
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script  src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    {{-- data table links --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
-  {{-- data table links --}}
+    {{-- data table links --}}
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -34,7 +31,7 @@
 </head>
 
 <body class="font-sans antialiased">
-{{-- small navbar start --}}
+    {{-- small navbar start --}}
     <div class="md:hidden block">
 
 
@@ -64,6 +61,10 @@
                 <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                         class="ri-flag-fill"></i> Banner</a>
                 <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                        class="ri-flag-fill"></i> Category</a>
+                <a href="/category" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                        class="ri-group-line"></i>Clients</a>
+                <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                         class="ri-dashboard-3-fill"></i> Projects</a>
                 <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                         class="ri-service-fill"></i> Services</a>
@@ -79,22 +80,33 @@
         </div>
     </div>
 
-{{-- small navbar end --}}
+    {{-- small navbar end --}}
 
     <div class="flex">
         <div class="w-56 h-screen bg-gray-600 shadow md:block hidden">
             <img src="{{ asset('images/logo.png') }}" class="w-full" alt="">
-            <a href="/dashboard" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-dashboard-3-fill"></i> Dashboard</a>
-            <a href="/notice" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-flag-fill"></i> Notice</a>
-
-            <a href="/banner" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-flag-fill"></i> Banner</a>
-
-            <a href="/project" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-dashboard-3-fill"></i> Projects</a>
-            <a href="/service" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-service-fill"></i> Services</a>
-            <a href="/blog" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-news-fill"></i> Blogs</a>
-            <a href="/contact" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-news-fill"></i> Contacts</a>
-            <a href="/user" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-folder-user-fill"></i> Users</a>
-            <a href="/logout" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-logout-circle-r-fill"></i> Logouts</a>
+            <a href="/dashboard" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-dashboard-3-fill"></i> Dashboard</a>
+            <a href="/notice" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-flag-fill"></i> Notice</a>
+            <a href="/banner" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-flag-fill"></i> Banner</a>
+            <a href="/category" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-flag-fill"></i> Category</a>
+            <a href="/client" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-group-line"></i> Clients</a>
+            <a href="/project" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-dashboard-3-fill"></i> Projects</a>
+            <a href="/service" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-service-fill"></i> Services</a>
+            <a href="/blog" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-news-fill"></i> Blogs</a>
+            <a href="/contact" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-news-fill"></i> Contacts</a>
+            <a href="/user" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-folder-user-fill"></i> Users</a>
+            <a href="/logout" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-logout-circle-r-fill"></i> Logouts</a>
         </div>
         <div class="flex-1 p-1">
 

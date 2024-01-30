@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Notice;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -12,7 +13,9 @@ class PagesController extends Controller
 
     public function welcome()
     {
-        return view('welcome');
+        $notices= Notice::where('show',1)->orderBy('priority')->get();
+        // dd($notices);
+        return view('welcome',compact('notices'));
     }
 
     public function about()

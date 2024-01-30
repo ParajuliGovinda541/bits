@@ -30,11 +30,9 @@ Category
                     @foreach ($categories as $category)
                         <tr>
                             <td>{{ $category->id }}</td>
-    
                             <td>{{ $category->category_name }}</td>
                             <td>{{ $category->category_priotity }}</td>
-
-                          
+                            <td>
                                 <a href="{{route('admin.category.edit',$category->id)}}" class="bg-blue-600 text-xl text-white px-3 py-1 rounded-lg">Edit</a>
                                 <a href="{{route('admin.category.destroy',$category->id)}}" onclick="return confirm('Are you sure want to delete ?')" class="bg-red-600 text-xl text-white px-1 py-1 rounded-lg">Delete</a>
                             </td>
