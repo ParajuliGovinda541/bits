@@ -19,7 +19,7 @@ class ClientController extends Controller
         // dd($request);
         $data=$request->validate([
             'priority'=>'required|numeric',
-            'image'=>'required'
+            'image'=>'required|mimes:jpeg,png,jpg'
         ]);
 
         if($request->hasFile('image'))
