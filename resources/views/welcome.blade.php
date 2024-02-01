@@ -521,140 +521,15 @@
         <div class=" py-10   ">
             <div class="swiper swiper2 ">
                 <div class="swiper-wrapper mb-10 ">
+                    @foreach ($clients as $client)
                     <div class="swiper-slide">
 
                         <div class="shadow px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
+                            <img src="{{asset('images/clients/'.$client->image)}}" alt="" class=" h-full mx-auto">
                         </div>
                     </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-
-                        <div class="shadow px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="shadow-2xl px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/animation.png')}}" alt="" class="h-24 mx-auto">
-
-                        </div>
-                    </div>
+                    @endforeach
+           
                 </div>
                 <div class="swiper-pagination "></div>
 

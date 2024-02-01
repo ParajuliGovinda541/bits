@@ -8,6 +8,7 @@ Category
 @endsection
 
 @section('content')
+@include('layouts.message')
 
 
 <section>
