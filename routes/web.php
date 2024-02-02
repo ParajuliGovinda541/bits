@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\admin\NoticeController;
@@ -56,6 +57,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/client/{id}/edit',[ClientController::class,'edit'])->name('admin.client.edit');
     Route::post('/client/{id}/update',[ClientController::class,'update'])->name('admin.client.update');
     Route::delete('/client/destroy',[ClientController::class,'destroy'])->name('admin.client.destroy');
+
+    Route::get('/team',[TeamController::class,'index'])->name('admin.team.index');
+    Route::get('/team/create',[TeamController::class,'create'])->name('admin.team.create');
+    Route::post('/team/store',[TeamController::class,'store'])->name('admin.team.store');
+    Route::get('/team/{id}/edit',[TeamController::class,'edit'])->name('admin.team.edit');
+    Route::post('/team/{id}/update',[TeamController::class,'update'])->name('admin.team.update');
+    Route::delete('/team/destroy',[TeamController::class,'destroy'])->name('admin.team.destroy');
 
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Notice;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -14,10 +15,12 @@ class PagesController extends Controller
 
     public function welcome()
     {
+
         $notices= Notice::where('show',1)->orderBy('priority')->get();
         // dd($notices);
         $clients= Client::orderBy('priority')->get();
-        return view('welcome',compact('notices','clients'));
+        $teams= Team::all();
+        return view('welcome',compact('notices','clients','teams'));
     }
 
     public function about()

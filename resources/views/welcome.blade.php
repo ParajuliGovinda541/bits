@@ -295,86 +295,33 @@
 
     <!-- Team member start  -->
     <section class="px-10">
-        <div class="text-center my-10">
+        <div class="text-center mt-10 ">
             <h1 class="text-4xl mb-5">
                 Team Member
 
             </h1>
             <p class="text-blue-600">The faces behind the success of Bitmap I.T. Solution Pvt. Ltd.</p>
         </div>
-        <div class="grid md:grid-cols-4 md:gap-6 bg-white">
-            <div class="text-center">
-                <div class=" relative group overflow-hidden h-72 ">
-                    <img src="{{asset('images/myimage_1684143425.png')}}"
-                        class="rounded-lg duration-200 group-hover:transform group-hover:scale-105 h-72 w-full object-cover"
-                        alt="">
-                    <div
-                        class=" hidden group-hover:flex gap-5 text-white bg-black bg-opacity-70 items-center justify-center absolute inset-0">
-                        <i class="fab fa-facebook mx-1"></i>
-                        <i class="fab fa-twitter mx-1"></i>
-                        <i class="fab fa-instagram mx-1"></i>
-                    </div>
-
+        <div class="grid md:grid-cols-4 md:gap-6 bg-white my-10 mb-36">
+          @foreach ($teams as $team)
+          <div class="text-center ">
+            <div class=" relative group overflow-hidden h-72 ">
+                <img src="{{asset('images/team/'.$team->team_image)}}"
+                    class="rounded-lg duration-200 group-hover:transform group-hover:scale-105 h-72 w-full object-cover"
+                    alt="">
+                <div
+                    class=" hidden group-hover:flex gap-5 text-white bg-black bg-opacity-70 items-center justify-center absolute inset-0">
+                    <i class="fab fa-facebook mx-1"></i>
+                    <i class="fab fa-twitter mx-1"></i>
+                    <i class="fab fa-instagram mx-1"></i>
                 </div>
-                <h3 class="text-black font-semibold">Roshan Khanal
-                </h3>
-                <p class="text-blue-600">Co-Founder/CEO</p>
+
             </div>
-            <div class="text-center">
-                <div class=" relative group overflow-hidden h-72 ">
-                    <img src="{{asset('images/myimage_1684143425.png')}}"
-                        class="rounded-lg duration-200 group-hover:transform group-hover:scale-105 h-72 w-full object-cover"
-                        alt="">
-                    <div
-                        class=" hidden group-hover:flex gap-5 text-white bg-black bg-opacity-70 items-center justify-center absolute inset-0">
-                        <i class="fab fa-facebook mx-1"></i>
-                        <i class="fab fa-twitter mx-1"></i>
-                        <i class="fab fa-instagram mx-1"></i>
-                    </div>
-
-                </div>
-                <h3 class="text-black font-semibold">Roshan Khanal
-                </h3>
-                <p class="text-blue-600">Co-Founder/CEO</p>
-            </div>
-            <div class="text-center">
-                <div class=" relative group overflow-hidden h-72 ">
-                    <img src="{{asset('images/myimage_1684143425.png')}}"
-                        class="rounded-lg duration-200 group-hover:transform group-hover:scale-105 h-72 w-full object-cover"
-                        alt="">
-                    <div
-                        class=" hidden group-hover:flex gap-5 text-white bg-black bg-opacity-70 items-center justify-center absolute inset-0">
-                        <i class="fab fa-facebook mx-1"></i>
-                        <i class="fab fa-twitter mx-1"></i>
-                        <i class="fab fa-instagram mx-1"></i>
-                    </div>
-
-                </div>
-                <h3 class="text-black font-semibold">Radha Mahato
-                </h3>
-                <p class="text-blue-600"> Graphics Desinger</p>
-            </div>
-            <div class="text-center">
-                <div class=" relative group overflow-hidden h-72 ">
-                    <img src="{{asset('images/myimage_1684143425.png')}}"
-                        class="rounded-lg duration-200 group-hover:transform group-hover:scale-105 h-72 w-full object-cover"
-                        alt="">
-                    <div
-                        class=" hidden group-hover:flex gap-5 text-white bg-black bg-opacity-70 items-center justify-center absolute inset-0">
-                        <i class="fab fa-facebook mx-1"></i>
-                        <i class="fab fa-twitter mx-1"></i>
-                        <i class="fab fa-instagram mx-1"></i>
-                    </div>
-
-                </div>
-                <h3 class="text-black font-semibold">Aman Chaudhary
-                </h3>
-                <p class="text-blue-600">Full Stack Developer</p>
-            </div>
-
-
-
-
+            <h3 class="text-black font-semibold capitalize">{{$team->name}}
+            </h3>
+            <p class="text-blue-600">Co-Founder/CEO</p>
+        </div>
+          @endforeach
         </div>
 
     </section>

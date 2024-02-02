@@ -95,6 +95,8 @@
                     class="ri-flag-fill"></i> Category</a>
             <a href="/client" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-group-line"></i> Clients</a>
+            <a href="/team" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-group-line"></i> Teams</a>
             <a href="/project" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-dashboard-3-fill"></i> Projects</a>
             <a href="/service" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
@@ -111,7 +113,7 @@
         <div class="flex-1 p-1">
 
             <div class="md:block hidden">
-                <h1 class="text-5xl mx-10 mb-2">@yield('heading')</h1>
+                <h1 class="text-3xl mx-10 mb-2">@yield('heading')</h1>
                 <hr class="h-2 my-2 w-full bg-black">
             </div>
             @yield('content')
