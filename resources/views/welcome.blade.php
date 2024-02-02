@@ -319,7 +319,7 @@
             </div>
             <h3 class="text-black font-semibold capitalize">{{$team->name}}
             </h3>
-            <p class="text-blue-600">Co-Founder/CEO</p>
+            <p class="text-blue-600">{{$team->position}}</p>
         </div>
           @endforeach
         </div>

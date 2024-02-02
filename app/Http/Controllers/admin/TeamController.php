@@ -70,4 +70,13 @@ class TeamController extends Controller
         $team= $team->update($data);
         return redirect(route('admin.team.index'))->with('success','Team Updated Sucessfullyy');
     }
+
+
+    public function destroy(Request $request)
+    {
+        // dd($request->all());
+        $team=Team::find($request->dataid);
+        $team->delete();
+        return redirect(route('admin.team.index'))->with('success','Team Deleted Sucessfully');
+    }
 }
