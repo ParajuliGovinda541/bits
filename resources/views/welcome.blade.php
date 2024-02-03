@@ -23,11 +23,11 @@
             </div>
         </div>
         <div>
-            <img class="lg:w-10/12 md:w-11/12 pb-24 md:py-0" src="{{asset('images/home.png')}}" alt="">
+            <img class="lg:w-10/12 md:w-11/12 pb-24 md:py-0" src="{{ asset('images/home.png') }}" alt="">
         </div>
 
     </section>
-    <img src="{{asset('images/home_bottom_shape.png')}}" alt="" class="md:-mt-52 -mt-36 h-40 w-full md:h-56">
+    <img src="{{ asset('images/home_bottom_shape.png') }}" alt="" class="md:-mt-52 -mt-36 h-40 w-full md:h-56">
 
 
     <!-- end of IT Solutions & Graphics Services Company  -->
@@ -40,8 +40,8 @@
         <marquee behavior="" direction="" scrollamount="10" class="  text-white px-2 font-bold bg-red-400">
             {{-- <img src="{{asset('images/home.png')}}" alt="" class=""> --}}
 
-            @foreach($notices as $notice)
-                {{$notice->notice_text}} ||
+            @foreach ($notices as $notice)
+                {{ $notice->notice_text }} ||
             @endforeach
 
         </marquee>
@@ -55,19 +55,20 @@
 
     <!-- start of services  -->
 
-    <section class="bg-[#FFFFFF] " >
-        <div class="" >
+    <section class="bg-[#FFFFFF] ">
+        <div class="">
 
-       
+
             <h1 class="text-4xl  text-center">Services</h1>
             <p class="text-center leading-10 text-blue-600">We provide the following Services as per the need of the
                 clients.</p>
         </div>
 
         <div class="grid md:grid-cols-3 md:px-16 px-10 gap-12">
-            <div class=" flex gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce " data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
+            <div class=" flex gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "
+                data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
                 <div>
-                    <img src="{{asset('images/html.png')}}" alt="" class="h-full w-40">
+                    <img src="{{ asset('images/html.png') }}" alt="" class="h-full w-40">
                 </div>
                 <div class="grid gap-3">
                     <h3 class="font-bold text-xl ">Website Development</h3>
@@ -76,9 +77,10 @@
                 </div>
 
             </div>
-            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "   data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "
+                data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
                 <div>
-                    <img src="{{asset('images/graphic-design.png')}}" alt="" class="h-full w-40">
+                    <img src="{{ asset('images/graphic-design.png') }}" alt="" class="h-full w-40">
                 </div>
                 <div class="grid gap-3">
                     <h3 class="font-bold text-[20px] ">Domanis & Hostings</h3>
@@ -87,9 +89,10 @@
                 </div>
 
             </div>
-            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "   data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "
+                data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
                 <div>
-                    <img src="{{asset('images/digital-marketing.png')}}" alt="" class="h-full w-40">
+                    <img src="{{ asset('images/digital-marketing.png') }}" alt="" class="h-full w-40">
                 </div>
                 <div class="grid gap-3">
                     <h3 class="font-bold text-xl">Internships</h3>
@@ -98,9 +101,10 @@
                 </div>
 
             </div>
-            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "   data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "
+                data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
                 <div>
-                    <img src="{{asset('images/software.png')}}" alt="" class="h-full w-40">
+                    <img src="{{ asset('images/software.png') }}" alt="" class="h-full w-40">
                 </div>
                 <div class="grid gap-3">
                     <h3 class="font-bold text-xl">Software Development</h3>
@@ -108,9 +112,10 @@
                 </div>
 
             </div>
-            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "   data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "
+                data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
                 <div>
-                    <img src="{{asset('images/mobile-application.png')}}" alt="" class="h-full w-40">
+                    <img src="{{ asset('images/mobile-application.png') }}" alt="" class="h-full w-40">
                 </div>
                 <div class="grid gap-3">
                     <h3 class="font-bold text-xl">Mobile App Development</h3>
@@ -118,9 +123,10 @@
                 </div>
 
             </div>
-            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "   data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "
+                data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
                 <div>
-                    <img src="{{asset('images/animation.png')}}" alt="" class="h-full w-40">
+                    <img src="{{ asset('images/animation.png') }}" alt="" class="h-full w-40">
                 </div>
                 <div class="grid gap-3">
                     <h3 class="font-bold text-xl">2D Animation</h3>
@@ -130,9 +136,10 @@
                 </div>
 
             </div>
-            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "   data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "
+                data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
                 <div>
-                    <img src="{{asset('images/web-hosting.png')}}" alt="" class="h-full w-40">
+                    <img src="{{ asset('images/web-hosting.png') }}" alt="" class="h-full w-40">
                 </div>
                 <div class="grid gap-3">
                     <h3 class="font-bold text-xl">Domain & Hosting</h3>
@@ -140,9 +147,10 @@
                 </div>
 
             </div>
-            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "   data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "
+                data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
                 <div>
-                    <img src="{{asset('images/internship.png')}}" alt="" class="h-full w-40">
+                    <img src="{{ asset('images/internship.png') }}" alt="" class="h-full w-40">
                 </div>
                 <div class="grid gap-3">
                     <h3 class="font-bold text-xl">Internshipst</h3>
@@ -150,9 +158,10 @@
                 </div>
 
             </div>
-            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "   data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="flex  gap-8 px-5 shadow-xl items-center py-12 rounded-lg wow animate__animated animate-bounce "
+                data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="1s">
                 <div>
-                    <img src="{{asset('images/class (1).png')}}" alt="" class="h-full w-40">
+                    <img src="{{ asset('images/class (1).png') }}" alt="" class="h-full w-40">
                 </div>
                 <div class="grid gap-3">
                     <h3 class="font-bold text-xl">Traning Classes</h3>
@@ -180,106 +189,32 @@
                 </div>
                 <div class="swiper swiper1">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide my-5">
-                            <div class="p-2 ">
-                                <img src="images/https://www.bitmapitsolution.com/images/testimonial_images/testimonial-1_1672569099.jpg"
-                                    class="rounded-full h-20 text-center mx-auto" alt="">
-                            </div>
+                       @foreach ($testomonials as $testomonial)
+                       <div class="swiper-slide my-5">
+                      
+                        <div class="flex justify-center text-center">
                             <div class="justify-center text-center">
-                                <h1 class="text-xl">Bipin Kandel</h1>
-                                <p class="text-sm">Founder Of V-Group</p>
-                                <p class="w-6/12 text-left mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Est
-                                    dicta assumenda sit, tempora eaque, doloremque, ratione eligendi labore sapiente
-                                    soluta
-                                    aliquid
-                                    iste quis commodi at! Excepturi inventore numquam quod sapiente!</p>
-                            </div>
+                                <img class="h-40 w-40 object-cover mx-auto rounded-[100%]" src=" {{asset('images/testomonial/'.$testomonial->client_image)}}" alt="">
+                                 <h1 class="text-xl">{{$testomonial->client_name}}</h1>
+                                 <p class="text-sm">{{$testomonial->client_company}}</p>
+                                 <p class="w-6/12 text-left mx-auto">{{$testomonial->client_word}}</p>
+                             </div>
                         </div>
-
-
-
-                        <div class="swiper-slide my-5">
-
-                            <div class="p-2 ">
-                                <img src="images/https://www.bitmapitsolution.com/images/testimonial_images/testimonial-1_1672569099.jpg"
-                                    class="rounded-full h-20 text-center mx-auto" alt="">
-                            </div>
-                            <div class="justify-center text-center">
-                                <h1 class="text-xl">Bipin Kandel</h1>
-                                <p class="text-sm">Founder Of V-Group</p>
-                                <p class="w-6/12 text-left mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Est
-                                    dicta assumenda sit, tempora eaque, doloremque, ratione eligendi labore sapiente
-                                    soluta
-                                    aliquid
-                                    iste quis commodi at! Excepturi inventore numquam quod sapiente!</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide my-5">
-
-                            <div class="p-2 ">
-                                <img src="images/https://www.bitmapitsolution.com/images/testimonial_images/testimonial-1_1672569099.jpg"
-                                    class="rounded-full h-20 text-center mx-auto" alt="">
-                            </div>
-                            <div class="justify-center text-center">
-                                <h1 class="text-xl">Bipin Kandel</h1>
-                                <p class="text-sm">Founder Of V-Group</p>
-                                <p class="w-6/12 text-left mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Est
-                                    dicta assumenda sit, tempora eaque, doloremque, ratione eligendi labore sapiente
-                                    soluta
-                                    aliquid
-                                    iste quis commodi at! Excepturi inventore numquam quod sapiente!</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide my-5">
-
-                            <div class="p-2 ">
-                                <img src="https://www.bitmapitsolution.com/images/testimonial_images/testimonial-1_1672569099.jpg"
-                                    class="rounded-full h-20 text-center mx-auto" alt="">
-                            </div>
-                            <div class="justify-center text-center">
-                                <h1 class="text-xl">Bipin Kandel</h1>
-                                <p class="text-sm">Founder Of V-Group</p>
-                                <p class="w-6/12 text-left mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Est
-                                    dicta assumenda sit, tempora eaque, doloremque, ratione eligendi labore sapiente
-                                    soluta
-                                    aliquid
-                                    iste quis commodi at! Excepturi inventore numquam quod sapiente!</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide my-5">
-                            <div>
-
-                            </div>
-                            <div class="p-2 ">
-                                <img src="https://www.bitmapitsolution.com/images/testimonial_images/testimonial-1_1672569099.jpg"
-                                    class="rounded-full h-20 text-center mx-auto" alt="">
-                            </div>
-                            <div class="justify-center text-center">
-                                <h1 class="text-xl">Bipin Kandel</h1>
-                                <p class="text-sm">Founder Of V-Group</p>
-                                <p class="w-6/12 text-left mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Est
-                                    dicta assumenda sit, tempora eaque, doloremque, ratione eligendi labore sapiente
-                                    soluta
-                                    aliquid
-                                    iste quis commodi at! Excepturi inventore numquam quod sapiente!</p>
-                            </div>
-                        </div>
-
                     </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <!-- <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div> -->
+                       @endforeach
+                    </div>
                 </div>
 
             </div>
+
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div> -->
+        </div>
+
+        </div>
 
         </div>
 
@@ -303,25 +238,25 @@
             <p class="text-blue-600">The faces behind the success of Bitmap I.T. Solution Pvt. Ltd.</p>
         </div>
         <div class="grid md:grid-cols-4 md:gap-6 bg-white my-10 mb-36">
-          @foreach ($teams as $team)
-          <div class="text-center ">
-            <div class=" relative group overflow-hidden h-72 ">
-                <img src="{{asset('images/team/'.$team->team_image)}}"
-                    class="rounded-lg duration-200 group-hover:transform group-hover:scale-105 h-72 w-full object-cover"
-                    alt="">
-                <div
-                    class=" hidden group-hover:flex gap-5 text-white bg-black bg-opacity-70 items-center justify-center absolute inset-0">
-                    <i class="fab fa-facebook mx-1"></i>
-                    <i class="fab fa-twitter mx-1"></i>
-                    <i class="fab fa-instagram mx-1"></i>
-                </div>
+            @foreach ($teams as $team)
+                <div class="text-center ">
+                    <div class=" relative group overflow-hidden h-72 ">
+                        <img src="{{ asset('images/team/' . $team->team_image) }}"
+                            class="rounded-lg duration-200 group-hover:transform group-hover:scale-105 h-72 w-full object-cover"
+                            alt="">
+                        <div
+                            class=" hidden group-hover:flex gap-5 text-white bg-black bg-opacity-70 items-center justify-center absolute inset-0">
+                            <i class="fab fa-facebook mx-1"></i>
+                            <i class="fab fa-twitter mx-1"></i>
+                            <i class="fab fa-instagram mx-1"></i>
+                        </div>
 
-            </div>
-            <h3 class="text-black font-semibold capitalize">{{$team->name}}
-            </h3>
-            <p class="text-blue-600">{{$team->position}}</p>
-        </div>
-          @endforeach
+                    </div>
+                    <h3 class="text-black font-semibold capitalize">{{ $team->name }}
+                    </h3>
+                    <p class="text-blue-600">{{ $team->position }}</p>
+                </div>
+            @endforeach
         </div>
 
     </section>
@@ -377,7 +312,7 @@
         <p class="text-center text-xl text-indigo-600 py-2">Recent Blog</p>
         <div class="grid md:grid-cols-3 gap-8 px-10  ">
             <div class=" cursor-pointer rounded-lg bg-gray-200 ">
-                <img src="{{asset('images/graphic_1684144239.jpg')}}" class="rounded-t-lg" alt="">
+                <img src="{{ asset('images/graphic_1684144239.jpg') }}" class="rounded-t-lg" alt="">
                 <div class="flex justify-between px-4">
                     <div>
                         <i class="ri-calendar-2-line">2023-12-05</i>
@@ -400,7 +335,8 @@
 
             </div>
             <div class=" cursor-pointer rounded-lg bg-gray-200">
-                <img src="{{asset('images/person-front-computer-working-html_1683801613-min_1684144337.jpg')}}" alt="">
+                <img src="{{ asset('images/person-front-computer-working-html_1683801613-min_1684144337.jpg') }}"
+                    alt="">
                 <div class="flex justify-between px-4">
                     <div>
                         <i class="ri-calendar-2-line">2023-12-05</i>
@@ -421,7 +357,7 @@
                 </div>
             </div>
             <div class=" cursor-pointer rounded-lg bg-gray-200">
-                <img src="{{asset('images/website_1671356221-min_1684144380.jpg')}}" alt="">
+                <img src="{{ asset('images/website_1671356221-min_1684144380.jpg') }}" alt="">
                 <div class="flex justify-between px-4">
                     <div>
                         <i class="ri-calendar-2-line">2023-12-05</i>
@@ -469,14 +405,15 @@
             <div class="swiper swiper2 ">
                 <div class="swiper-wrapper mb-10 ">
                     @foreach ($clients as $client)
-                    <div class="swiper-slide">
+                        <div class="swiper-slide">
 
-                        <div class="shadow px-2 py-5 border rounded-lg">
-                            <img src="{{asset('images/clients/'.$client->image)}}" alt="" class=" h-full mx-auto">
+                            <div class="shadow px-2 py-5 border rounded-lg">
+                                <img src="{{ asset('images/clients/' . $client->image) }}" alt=""
+                                    class=" h-full mx-auto">
+                            </div>
                         </div>
-                    </div>
                     @endforeach
-           
+
                 </div>
                 <div class="swiper-pagination "></div>
 

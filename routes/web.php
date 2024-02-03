@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\TestomonialController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\admin\NoticeController;
@@ -57,6 +58,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/client/{id}/edit',[ClientController::class,'edit'])->name('admin.client.edit');
     Route::post('/client/{id}/update',[ClientController::class,'update'])->name('admin.client.update');
     Route::delete('/client/destroy',[ClientController::class,'destroy'])->name('admin.client.destroy');
+
+
+    Route::get('/testomonial',[TestomonialController::class,'index'])->name('admin.testomonial.index');
+    Route::get('/testomonial/create',[TestomonialController::class,'create'])->name('admin.testomonial.create');
+    Route::post('/testomonial/store',[TestomonialController::class,'store'])->name('admin.testomonial.store');
+    Route::get('/testomonial/{id}/edit',[TestomonialController::class,'edit'])->name('admin.testomonial.edit');
+    Route::post('/testomonial/{id}/update',[TestomonialController::class,'update'])->name('admin.testomonial.update');
+    Route::delete('/testomonial/destroy',[TestomonialController::class,'destroy'])->name('admin.testomonial.destroy');
 
     Route::get('/team',[TeamController::class,'index'])->name('admin.team.index');
     Route::get('/team/create',[TeamController::class,'create'])->name('admin.team.create');

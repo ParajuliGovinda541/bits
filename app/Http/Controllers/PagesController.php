@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use App\Models\Notice;
 use App\Models\Team;
+use App\Models\Testomonial;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -20,7 +21,9 @@ class PagesController extends Controller
         // dd($notices);
         $clients= Client::orderBy('priority')->get();
         $teams= Team::all();
-        return view('welcome',compact('notices','clients','teams'));
+        $testomonials= Testomonial::orderBy('client_priority')->get();
+
+        return view('welcome',compact('notices','clients','teams','testomonials'));
     }
 
     public function about()
