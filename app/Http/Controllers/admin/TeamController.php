@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class TeamController extends Controller
 {
@@ -27,6 +28,10 @@ class TeamController extends Controller
         
             'name'=>'required',
             'position'=>'required',
+            'priority'=>'required|numeric',
+            'facebook'=>'required',
+            'twitter'=>'required',
+            'instagram'=>'required',
 
             'team_image'=>'required|mimes:jpeg,png,jpg'
         ]);
@@ -51,11 +56,16 @@ class TeamController extends Controller
 
     public function update (Request $request, $id)
     {
+        $team = Team::find($id);
+
         $data= $request->validate([
         
             'name'=>'required',
             'position'=>'required',
-
+            'priority'=>'required|numeric',
+            'facebook'=>'required',
+            'twitter'=>'required',
+            'instagram'=>'required',
             'team_image'=>'required|mimes:jpeg,png,jpg'
         ]);
         if($request->hasFile('team_image'))
@@ -64,9 +74,10 @@ class TeamController extends Controller
             $name= time().'.'.$image->getClientOriginalExtension();
             $destinationPath=public_path('/images/team');
             $image ->move($destinationPath,$name);
+            File::delete('images/team/'.$team->image);
+
             $data['team_image']=$name;    
         }
-        $team = Team::find($id);
         $team= $team->update($data);
         return redirect(route('admin.team.index'))->with('success','Team Updated Sucessfullyy');
     }

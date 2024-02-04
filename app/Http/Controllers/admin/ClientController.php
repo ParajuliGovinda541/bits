@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+
 
 class   ClientController extends Controller
 {
@@ -52,6 +54,8 @@ class   ClientController extends Controller
     public function update(Request $request, $id)
     {
         // dd($request);
+        $clients=Client::find($id);
+
         $data=$request->validate([
             'priority'=>'required|numeric',
             'image'=>'required|mimes:jpeg,png,jpg'
@@ -63,10 +67,10 @@ class   ClientController extends Controller
             $name= time().'.'.$image->getClientOriginalExtension();
             $destinationPath=public_path('/images/clients');
             $image ->move($destinationPath,$name);
+            File::delete('images/clients/'.$clients->image);
             $data['image']=$name;    
             
         }
-        $clients=Client::find($id);
         Client::update($data);
         return redirect(route('admin.client.update',compact('clients')))->with('success','Client Updated Successfully');
 

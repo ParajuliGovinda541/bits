@@ -75,7 +75,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/team/destroy',[TeamController::class,'destroy'])->name('admin.team.destroy');
 
 
-
+    // Route::get('/blog',[blogController::class,'index'])->name('admin.blog.index');
+    // Route::get('/blog/create',[blogController::class,'create'])->name('admin.blog.create');
+    // Route::post('/blog/store',[blogController::class,'store'])->name('admin.blog.store');
+    // Route::get('/blog/{id}/edit',[blogController::class,'edit'])->name('admin.blog.edit');
+    // Route::post('/blog/{id}/update',[blogController::class,'update'])->name('admin.blog.update');
+    // Route::delete('/blog/destroy',[blogController::class,'destroy'])->name('admin.blog.destroy');
 
 
     Route::get('/banner',[BannerController::class,'index'])->name('admin.banner.index');

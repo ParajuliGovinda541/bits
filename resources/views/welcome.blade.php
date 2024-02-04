@@ -246,9 +246,18 @@
                             alt="">
                         <div
                             class=" hidden group-hover:flex gap-5 text-white bg-black bg-opacity-70 items-center justify-center absolute inset-0">
+                        <a href="{{$team->facebook}}" target="_onblank">
                             <i class="fab fa-facebook mx-1"></i>
+                        </a>
+                        <a href="{{$team->twitter}}">
                             <i class="fab fa-twitter mx-1"></i>
+
+                        </a>
+                        <a href="{{$team->instagram}}">
                             <i class="fab fa-instagram mx-1"></i>
+
+
+                        </a>
                         </div>
 
                     </div>

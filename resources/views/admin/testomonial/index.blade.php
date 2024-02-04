@@ -31,7 +31,7 @@
                     <td><img src="{{asset('images/testomonial/'.$testomonial->client_image )}}" class="h-20" alt="" srcset=""></td>
 
                     <td class="font-bold uppercase">{{$testomonial->client_company }}</td>
-                    <td class="font-bold uppercase line-clamp-3">{{$testomonial->client_word }}</td>
+                    <td class="font-bold uppercase text-sm line-clamp-3">{{$testomonial->client_word }}</td>
 
                     <td>
                         <a href="{{ route('admin.testomonial.edit', $testomonial->id) }}"

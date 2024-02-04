@@ -2,10 +2,10 @@
 
 @section('content')
     <section>
-        <div class="bg-cover h-28 " style="background-image: url('{{ asset('images/blog_bg.jpg') }}');">
+        <div class="bg-cover object-cover h-72 flex items-center " style="background-image: url('{{ asset('images/blog_bg.jpg') }}');">
 
-            <div class=" ">
-                <h1 class="text-4xl font-bold text-white  items-center">Projects</h1>
+            <div class="   p-10  ">
+                <h1 class="text-4xl  text-white  items-center">Projects</h1>
             </div>
 
 

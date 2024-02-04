@@ -100,7 +100,7 @@
             <a href="{{ route('admin.testomonial.index') }}"
                 class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-group-line"></i>
                 Testomonials</a>
-            <a href="/project" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+            <a href="" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-dashboard-3-fill"></i> Projects</a>
             <a href="/service" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-service-fill"></i> Services</a>

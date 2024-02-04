@@ -17,8 +17,12 @@
         <thead>
             <th>ID</th>
             <th>Member Name</th>
+            <th>Member Priority</th>
             <th>Member Position</th>
             <th>Member Image</th>
+            <th>Facebook Link</th>
+            <th>Instagram Link</th>
+            <th>Twitter Link</th>
             <th>Action</th>
         </thead>
         <tbody>
@@ -27,8 +31,14 @@
                     <td>{{$team->id }}</td>
 
                     <td class="font-bold uppercase">{{$team->name }}</td>
+                    <td class="font-bold uppercase">{{$team->priority }}</td>
                     <td class="font-bold uppercase">{{$team->position }}</td>
+
                     <td><img src="{{asset('images/team/'.$team->team_image )}}" class="h-20" alt="" srcset=""></td>
+                    <td class="font-bold uppercase">{{$team->facebook }}</td>
+                    <td class="font-bold uppercase">{{$team->instagram }}</td>
+                    <td class="font-bold uppercase">{{$team->twitter }}</td>
+
                     <td>
                         <a href="{{ route('admin.team.edit', $team->id) }}"
                             class="bg-blue-600 text-xl text-white px-3 py-1 rounded-lg">Edit</a>
