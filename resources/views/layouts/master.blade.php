@@ -74,7 +74,7 @@
                         <a class="font-bold" href="/contact">Home</a>
                         <a class="block my-2" href="">About Us</a>
                         <a class="block my-2" href="">Services</a>
-                        <a class="block my-2" href="">Projects</a>
+                        <a class="block my-2" href="{{route('project')}}">Projects</a>
                         <a class="block my-2" href="">Blogs</a>
                         <a class="block my-2" href="">Contact Us</a>
                     </div>
@@ -92,7 +92,7 @@
                     <a class="font-bold" href="">Home</a>
                     <a href="/about">About Us</a>
                     <a href="">Services</a>
-                    <a href="">Projects</a>
+                    <a href="{{route('project')}}">Projects</a>
                     <a href="">Blogs</a>
                     <a href="/contact">Contact Us</a>
                 </div>

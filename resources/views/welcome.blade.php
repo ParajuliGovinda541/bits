@@ -409,7 +409,7 @@
 
                             <div class="shadow px-2 py-5 border rounded-lg">
                                 <img src="{{ asset('images/clients/' . $client->image) }}" alt=""
-                                    class=" h-full mx-auto">
+                                    class=" h-20 mx-auto">
                             </div>
                         </div>
                     @endforeach
