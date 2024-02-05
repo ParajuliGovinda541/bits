@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestomonialController;
 use App\Http\Controllers\ProfileController;
@@ -40,6 +42,8 @@ Route::middleware('auth')->group(function () {
 
 
 
+    Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.index');
+
 
 
 
@@ -73,6 +77,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/team/{id}/edit',[TeamController::class,'edit'])->name('admin.team.edit');
     Route::post('/team/{id}/update',[TeamController::class,'update'])->name('admin.team.update');
     Route::delete('/team/destroy',[TeamController::class,'destroy'])->name('admin.team.destroy');
+
+
+    Route::get('/project',[ProjectController::class,'index'])->name('admin.project.index');
+    Route::get('/project/create',[ProjectController::class,'create'])->name('admin.project.create');
+    Route::post('/project/store',[ProjectController::class,'store'])->name('admin.project.store');
+    Route::get('/project/{id}/edit',[ProjectController::class,'edit'])->name('admin.project.edit');
+    Route::post('/project/{id}/update',[ProjectController::class,'update'])->name('admin.project.update');
+    Route::delete('/project/destroy',[ProjectController::class,'destroy'])->name('admin.project.destroy');
 
 
     // Route::get('/blog',[blogController::class,'index'])->name('admin.blog.index');
@@ -129,7 +141,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/welcome',[PagesController::class,'welcome'])->name('welcome');
 Route::get('/about',[PagesController::class,'about'])->name('about');
 Route::get('/contact',[PagesController::class,'contact'])->name('contact');
-Route::get('/project',[PagesController::class,'project'])->name('project');
+Route::get('/projects',[PagesController::class,'project'])->name('project');
 
 
 
