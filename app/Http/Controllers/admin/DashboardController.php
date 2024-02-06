@@ -9,6 +9,7 @@ use App\Models\Client;
 use App\Models\Notice;
 use App\Models\Team;
 use App\Models\Testomonial;
+use App\Models\Visit;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -23,6 +24,7 @@ class DashboardController extends Controller
         $clients= Client::count();
         $teams= Team::count();
         $testo= Testomonial::count();
-        return view("dashboard",compact("notices","banners","categories","clients","teams","testo"));
+        $visits= Visit::count();
+        return view("dashboard",compact("notices","banners","categories","clients","teams","testo","visits"));
     }
 }

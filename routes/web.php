@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -87,12 +88,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/project/destroy',[ProjectController::class,'destroy'])->name('admin.project.destroy');
 
 
-    // Route::get('/blog',[blogController::class,'index'])->name('admin.blog.index');
-    // Route::get('/blog/create',[blogController::class,'create'])->name('admin.blog.create');
-    // Route::post('/blog/store',[blogController::class,'store'])->name('admin.blog.store');
-    // Route::get('/blog/{id}/edit',[blogController::class,'edit'])->name('admin.blog.edit');
-    // Route::post('/blog/{id}/update',[blogController::class,'update'])->name('admin.blog.update');
-    // Route::delete('/blog/destroy',[blogController::class,'destroy'])->name('admin.blog.destroy');
+    Route::get('/blog',[BlogController::class,'index'])->name('admin.blog.index');
+    Route::get('/blog/create',[BlogController::class,'create'])->name('admin.blog.create');
+    Route::post('/blog/store',[BlogController::class,'store'])->name('admin.blog.store');
+    Route::get('/blog/{id}/edit',[BlogController::class,'edit'])->name('admin.blog.edit');
+    Route::post('/blog/{id}/update',[BlogController::class,'update'])->name('admin.blog.update');
+    Route::delete('/blog/destroy',[BlogController::class,'destroy'])->name('admin.blog.destroy');
 
 
     Route::get('/banner',[BannerController::class,'index'])->name('admin.banner.index');

@@ -19,13 +19,11 @@
                 {{-- <th>S.N</th> --}}
                 <th>ID</th>
                 <th>Date</th>
-
                 <th>Title</th>
-                <th>Image</th>
-                <th>Author</th>
                 <th>Description</th>
+                <th>Author</th>
+                <th>Image</th>
                 <th>links</th>
-
                 <th>Priority</th>
                 <th>Action</th>
             </thead>
@@ -33,12 +31,14 @@
                 @foreach ($blogs as $blog)
                     <tr>
                         <td>{{ $blog->id }}</td>
-
+                        <td>{{ $blog->priority }}</td>
+                        <td>{{ $blog->blog_date }}</td>
+                        <td>{{ $blog->links }}</td>
                         <td>{{ $blog->title }}</td>
                         <td><img class="h-20" src="{{ asset('images/blogs/'.$blog->image) }}" alt=""></td>
                         <td>{{ $blog->descripton }}</td>
                         <td>{{ $blog->priority }}</td>
-                        {{-- <td>{{ $blog->show ? 'show' : 'Hidden' }}</td> --}}
+                
                         <td>
                             <a href="{{ route('admin.blog.edit', $blog->id) }}"
                                 class="bg-blue-600 text-xl text-white px-3 py-1 rounded-lg">Edit</a>

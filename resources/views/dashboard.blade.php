@@ -42,8 +42,8 @@ Dashboard
                 <h1 class="text-4xl font-bold">{{$testo}}</h1>
             </div>
             <div class="shadow-lg cursor-pointer bg-red-600 px-10 py-5 rounded-md flex justify-between">
-                <h1 class="text-xl">Users</h1>
-                <h1 class="text-4xl font-bold">10</h1>
+                <h1 class="text-xl">Visits</h1>
+                <h1 class="text-4xl font-bold">{{$visits}}</h1>
             </div>
             <div class="shadow-lg cursor-pointer bg-blue-600 px-10 py-5 rounded-md flex justify-between">
                 <h1 class="text-xl">Logouts</h1>
