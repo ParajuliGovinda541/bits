@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Client;
 use App\Models\Notice;
+use App\Models\Project;
 use App\Models\Team;
 use App\Models\Testomonial;
 use Illuminate\Http\Request;
@@ -36,15 +38,22 @@ class PagesController extends Controller
         return view('contact');
     }
 
-    // public function project()
-    // {
-    //     return view('project');
-    // }
+    public function projects()
+    {
+        $projects= Project::orderBy('priority')->get();
+        return view('projects',compact('projects'));
+    }
 
    
     public function service()
     {
         return view('service');
+    }
+
+    public function blogs()
+    {
+        $blogs=Blog::orderBy('priority')->get();
+        return view('blogs',compact('blogs'));
     }
 }
 

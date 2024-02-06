@@ -2,14 +2,14 @@
 
 
 @section('heading')
-    Project
+    Blog
 @endsection
 
 @section('content')
    @include('layouts.message')
 
     <div class="flex justify-end">
-        <a href="{{ route('admin.project.create') }}" class="bg-green-600 text-white px-4 py-2 rounded-lg mb-3">Add project</a>
+        <a href="{{ route('admin.blog.create') }}" class="bg-green-600 text-white px-4 py-2 rounded-lg mb-3">Add project</a>
     </div>
 
     <div>
@@ -18,26 +18,31 @@
             <thead>
                 {{-- <th>S.N</th> --}}
                 <th>ID</th>
+                <th>Date</th>
+
                 <th>Title</th>
                 <th>Image</th>
+                <th>Author</th>
                 <th>Description</th>
+                <th>links</th>
+
                 <th>Priority</th>
                 <th>Action</th>
             </thead>
             <tbody>
-                @foreach ($projects as $project)
+                @foreach ($blogs as $blog)
                     <tr>
-                        <td>{{ $project->id }}</td>
+                        <td>{{ $blog->id }}</td>
 
-                        <td>{{ $project->title }}</td>
-                        <td><img class="h-20" src="{{ asset('images/projects/'.$project->image) }}" alt=""></td>
-                        <td>{{ $project->descripton }}</td>
-                        <td>{{ $project->priority }}</td>
-                        {{-- <td>{{ $project->show ? 'show' : 'Hidden' }}</td> --}}
+                        <td>{{ $blog->title }}</td>
+                        <td><img class="h-20" src="{{ asset('images/blogs/'.$blog->image) }}" alt=""></td>
+                        <td>{{ $blog->descripton }}</td>
+                        <td>{{ $blog->priority }}</td>
+                        {{-- <td>{{ $blog->show ? 'show' : 'Hidden' }}</td> --}}
                         <td>
-                            <a href="{{ route('admin.project.edit', $project->id) }}"
+                            <a href="{{ route('admin.blog.edit', $blog->id) }}"
                                 class="bg-blue-600 text-xl text-white px-3 py-1 rounded-lg">Edit</a>
-                            <a onclick="showDelete('{{ $project->id }}')"
+                            <a onclick="showDelete('{{ $blog->id }}')"
                                 class="bg-red-600 text-xl text-white px-1 py-1 rounded-lg cursor-pointer">Delete</a>
                         </td>
 

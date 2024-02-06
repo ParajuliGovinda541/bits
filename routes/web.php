@@ -116,19 +116,6 @@ Route::middleware('auth')->group(function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -141,7 +128,9 @@ Route::middleware('auth')->group(function () {
 Route::get('/welcome',[PagesController::class,'welcome'])->name('welcome');
 Route::get('/about',[PagesController::class,'about'])->name('about');
 Route::get('/contact',[PagesController::class,'contact'])->name('contact');
-Route::get('/projects',[PagesController::class,'project'])->name('project');
+Route::get('/projects',[PagesController::class,'projects'])->name('projects');
+Route::get('/blogs',[PagesController::class,'blogs'])->name('blogs');
+
 
 
 

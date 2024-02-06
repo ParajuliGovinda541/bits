@@ -74,8 +74,8 @@
                         <a class="font-bold" href="/contact">Home</a>
                         <a class="block my-2" href="">About Us</a>
                         <a class="block my-2" href="">Services</a>
-                        <a class="block my-2" href="{{route('project')}}">Projects</a>
-                        <a class="block my-2" href="">Blogs</a>
+                        <a class="block my-2" href="{{route('projects')}}">Projects</a>
+                        <a class="block my-2" href="{{route('blogs')}}">Blogs</a>
                         <a class="block my-2" href="">Contact Us</a>
                     </div>
                     <a href="" class="bg-indigo-700 rounded-xl text-white px-2 py-1  mb-6 hover:bg-red-600 duration-700">Get
@@ -92,8 +92,8 @@
                     <a class="font-bold" href="">Home</a>
                     <a href="/about">About Us</a>
                     <a href="">Services</a>
-                    <a href="{{route('project')}}">Projects</a>
-                    <a href="">Blogs</a>
+                    <a href="{{route('projects')}}">Projects</a>
+                    <a href="{{route('blogs')}}">Blogs</a>
                     <a href="/contact">Contact Us</a>
                 </div>
                 <a href="" class="bg-indigo-700 rounded-xl text-white px-2 py-1 mr-8 my-6 hover:bg-red-600 duration-700">Get IT
