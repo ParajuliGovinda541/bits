@@ -10,6 +10,7 @@ use App\Models\Notice;
 use App\Models\Team;
 use App\Models\Testomonial;
 use App\Models\Visit;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -24,7 +25,10 @@ class DashboardController extends Controller
         $clients= Client::count();
         $teams= Team::count();
         $testo= Testomonial::count();
-        $visits= Visit::count();
-        return view("dashboard",compact("notices","banners","categories","clients","teams","testo","visits"));
+        $date= Carbon::today()->subDays(30);
+        $totalvisits=Visit::sum('no_of_visits');
+        $visitdate=Visit::where('visit_date','>=',$date)->pluck('visit_date');
+        $visits= Visit::where('visit_date','>=',$date)->pluck('no_of_visits');
+        return view("dashboard",compact("notices","banners","categories","clients","teams","testo","visits",'totalvisits','visitdate'));
     }
 }

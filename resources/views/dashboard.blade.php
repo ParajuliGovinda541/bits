@@ -41,13 +41,13 @@ Dashboard
                 <h1 class="text-xl">Testomonial</h1>
                 <h1 class="text-4xl font-bold">{{$testo}}</h1>
             </div>
-            <div class="shadow-lg cursor-pointer bg-red-600 px-10 py-5 rounded-md flex justify-between">
+            {{-- <div class="shadow-lg cursor-pointer bg-red-600 px-10 py-5 rounded-md flex justify-between">
                 <h1 class="text-xl">Visits</h1>
                 <h1 class="text-4xl font-bold">{{$visits}}</h1>
-            </div>
+            </div> --}}
             <div class="shadow-lg cursor-pointer bg-blue-600 px-10 py-5 rounded-md flex justify-between">
-                <h1 class="text-xl">Logouts</h1>
-                <h1 class="text-4xl font-bold">10</h1>
+                <h1 class="text-xl">TotalVisit</h1>
+                <h1 class="text-4xl font-bold">{{$totalvisits}}</h1>
             </div>
         </div>
         <div class="grid md:grid-cols-3 gap-10 mx-10  text-center my-5 ">
@@ -76,12 +76,12 @@ Dashboard
             const ctx = document.getElementById('myChart');
           
             new Chart(ctx, {
-              type: 'bar',
+              type: 'line',
               data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: {!! $visitdate !!},
                 datasets: [{
-                  label: '# of Votes',
-                  data: [12, 19, 3, 5, 2, 3],
+                  label: 'No of Visits',
+                  data: {!!$visits!!},
                   borderWidth: 1
                 }]
               },

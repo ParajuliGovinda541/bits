@@ -9,7 +9,7 @@
    @include('layouts.message')
 
     <div class="flex justify-end">
-        <a href="{{ route('admin.blog.create') }}" class="bg-green-600 text-white px-4 py-2 rounded-lg mb-3">Add project</a>
+        <a href="{{ route('admin.blog.create') }}" class="bg-green-600 text-white px-4 py-2 rounded-lg mb-3">Add Blog</a>
     </div>
 
     <div>
@@ -31,14 +31,13 @@
                 @foreach ($blogs as $blog)
                     <tr>
                         <td>{{ $blog->id }}</td>
-                        <td>{{ $blog->priority }}</td>
                         <td>{{ $blog->blog_date }}</td>
-                        <td>{{ $blog->links }}</td>
                         <td>{{ $blog->title }}</td>
+                        <td class="line-clamp-2">{{ $blog->description }}</td>
+                        <td>{{ $blog->author }}</td>
                         <td><img class="h-20" src="{{ asset('images/blogs/'.$blog->image) }}" alt=""></td>
-                        <td>{{ $blog->descripton }}</td>
+                        <td>{{ $blog->links }}</td>
                         <td>{{ $blog->priority }}</td>
-                
                         <td>
                             <a href="{{ route('admin.blog.edit', $blog->id) }}"
                                 class="bg-blue-600 text-xl text-white px-3 py-1 rounded-lg">Edit</a>
