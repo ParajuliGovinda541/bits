@@ -2,14 +2,14 @@
 
 
 @section('heading')
-    Blog
+    Product
 @endsection
 
 @section('content')
    @include('layouts.message')
 
     <div class="flex justify-end">
-        <a href="{{ route('admin.blog.create') }}" class="bg-green-600 text-white px-4 py-2 rounded-lg mb-3">Add Blog</a>
+        <a href="{{ route('admin.product.create') }}" class="bg-green-600 text-white px-4 py-2 rounded-lg mb-3">Add Product</a>
     </div>
 
     <div>
@@ -18,30 +18,36 @@
             <thead>
                 {{-- <th>S.N</th> --}}
                 <th>ID</th>
-                <th>Date</th>
+                <th>Name</th>
+                <th>Category ID</th>
+
                 <th>Title</th>
                 <th>Description</th>
-                <th>Author</th>
                 <th>Image</th>
-                <th>links</th>
-                <th>Priority</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Discounted Price</th>
+
                 <th>Action</th>
             </thead>
             <tbody>
-                @foreach ($blogs as $blog)
+                @foreach ($products as $product)
                     <tr>
-                        <td>{{ $blog->id }}</td>
-                        <td>{{ $blog->blog_date }}</td>
-                        <td>{{ $blog->title }}</td>
-                        <td class="line-clamp-2">{{ $blog->description }}</td>
-                        <td>{{ $blog->author }}</td>
-                        <td><img class="h-20 object-cover " src="{{ asset('images/blogs/'.$blog->image) }}" alt=""></td>
-                        <td>{{ $blog->links }}</td>
-                        <td>{{ $blog->priority }}</td>
+                        <td>{{ $product->id }}</td>
+                        <td>{{ $product->name }}</td>
+                        <td>{{ $product->category_id }}</td>
+
+                        <td>{{ $product->title }}</td>
+                        <td><div class="h-20 overflow-auto">{{ $product->description }}</div></td>
+                        <td><img class="h-20 object-cover" src="{{ asset('images/products/'.$product->image) }}" alt=""></td>
+                        <td>{{ $product->stock }}</td>
+                        <td>{{ $product->price }}</td>
+                        <td>{{ $product->discounted_price }}</td>
+
                         <td>
-                            <a href="{{ route('admin.blog.edit', $blog->id) }}"
+                            <a href="{{ route('admin.product.edit', $product->id) }}"
                                 class="bg-blue-600 text-xl text-white px-3 py-1 rounded-lg">Edit</a>
-                            <a onclick="showDelete('{{ $blog->id }}')"
+                            <a onclick="showDelete('{{ $product->id }}')"
                                 class="bg-red-600 text-xl text-white px-1 py-1 rounded-lg cursor-pointer">Delete</a>
                         </td>
 
@@ -56,7 +62,7 @@
     {{-- delete modal --}}
     <div class="hidden items-center justify-center inset-0 bg-blue-600 fixed backdrop-blur-sm bg-opacity-50 "
         id="deletePopup">
-        <form action="{{ route('admin.project.destroy') }}" method="POST"
+        <form action="{{ route('admin.product.destroy') }}" method="POST"
             class="shadow-2xl shadow-white w-4/12 mx-auto  p-10 relative rounded-md ">
             @csrf
             @method('DELETE')

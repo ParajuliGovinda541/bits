@@ -17,7 +17,6 @@
         <table id="myTable">
             <thead>
 
-                {{-- <th>S>N</th> --}}
                 <th>Clients ID</th>
                 <th>Images </th>
                 <th>Action</th>
@@ -25,16 +24,8 @@
             <tbody>
                 @foreach ($clients as $client)
                     <tr>
-                        {{-- $sns=1 --}}
-
-                        {{-- @foreach ($sns as $sn)
-                        {{-- <th></th> --}}
-                        {{-- <td>{{sn+1}}</td> --}}
-
-                        {{-- @endforeach --}}
                         <td>{{ $client->id }}</td>
                         <td> <img class="h-20" src="{{ asset('images/clients/'.$client->image) }}" alt=""></td>
-                        {{-- <td>{{ $client->show ? 'show' : 'Hidden' }}</td> --}}
                         <td>
                             <a href="{{ route('admin.client.edit', $client->id) }}"
                                 class="bg-blue-600 text-xl text-white px-3 py-1 rounded-lg">Edit</a>

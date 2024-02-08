@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestomonialController;
@@ -108,6 +109,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/category/store',[CategoryController::class,'store'])->name('admin.category.store');
     Route::get('/category/{id}/edit',[CategoryController::class,'edit'])->name('admin.category.edit');
     Route::get('/category/{id}/destroy',[CategoryController::class,'destroy'])->name('admin.category.destroy');
+
+    Route::get('/product',[ProductController::class,'index'])->name('admin.product.index');
+    Route::get('/product/create',[ProductController::class,'create'])->name('admin.product.create');
+    Route::post('/product/store',[ProductController::class,'store'])->name('admin.product.store');
+    Route::get('/product/{id}/edit',[ProductController::class,'edit'])->name('admin.product.edit');
+    Route::delete('/product/destroy',[ProductController::class,'destroy'])->name('admin.product.destroy');
 
 
 

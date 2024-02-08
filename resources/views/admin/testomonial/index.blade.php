@@ -28,10 +28,11 @@
                     <td>{{$testomonial->id }}</td>
 
                     <td class="font-bold uppercase">{{$testomonial->client_name }}</td>
-                    <td><img src="{{asset('images/testomonial/'.$testomonial->client_image )}}" class="h-20" alt="" srcset=""></td>
+                    <td class=""><img class="object-cover h-20" src="{{asset('images/testomonial/'.$testomonial->client_image )}}" class="h-20" alt="" srcset=""></td>
 
                     <td class="font-bold uppercase">{{$testomonial->client_company }}</td>
-                    <td class="font-bold uppercase text-sm line-clamp-3">{{$testomonial->client_word }}</td>
+                    <td class="font-bold ">
+                        <div class="h-20 overflow-auto ">{{$testomonial->client_word }}</</div><td>
 
                     <td>
                         <a href="{{ route('admin.testomonial.edit', $testomonial->id) }}"

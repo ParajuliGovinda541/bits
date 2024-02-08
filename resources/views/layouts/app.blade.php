@@ -100,14 +100,16 @@
             <a href="{{ route('admin.testomonial.index') }}"
                 class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-group-line"></i>
                 Testomonials</a>
-                <a href="{{ route('admin.project.index') }}"
+            <a href="{{ route('admin.project.index') }}"
                 class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-group-line"></i>
                 Projects</a>
-         
+
             <a href="/service" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-service-fill"></i> Services</a>
             <a href="/blog" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-news-fill"></i> Blogs</a>
+            <a href="/product" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                    class="ri-news-fill"></i> Products</a>
             <a href="/contact" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-news-fill"></i> Contacts</a>
             <a href="/user" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i

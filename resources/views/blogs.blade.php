@@ -9,11 +9,11 @@
             <div class="grid grid-cols-3 gap-10 px-20">
 
                 @foreach ($blogs as $blog)
-                <div class="rounded-md my-2 shadow ">
+                <div class="rounded-md my-2 shadow overflow-hidden ">
 
                     <a href="">
-                            <div>
-                                <img class=" hover:scale-105 duration-700  rounded-t-md"
+                            <div class="h-60 object-cover w-full">
+                                <img class=" h-60 w-full object-cover hover:scale-105 duration-700  rounded-t-md"
                                     src="{{ asset('images/blogs/' . $blog->image) }}" alt="">
                             </div>
                             <div class="flex justify-between px-3 pt-1">
