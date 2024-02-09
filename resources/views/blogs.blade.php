@@ -11,7 +11,7 @@
                 @foreach ($blogs as $blog)
                 <div class="rounded-md my-2 shadow overflow-hidden ">
 
-                    <a href="">
+                    <a href="{{route('viewblogs',$blog->id)}}">
                             <div class="h-60 object-cover w-full">
                                 <img class=" h-60 w-full object-cover hover:scale-105 duration-700  rounded-t-md"
                                     src="{{ asset('images/blogs/' . $blog->image) }}" alt="">

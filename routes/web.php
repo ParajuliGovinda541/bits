@@ -138,6 +138,8 @@ Route::get('/about',[PagesController::class,'about'])->name('about');
 Route::get('/contact',[PagesController::class,'contact'])->name('contact');
 Route::get('/projects',[PagesController::class,'projects'])->name('projects');
 Route::get('/blogs',[PagesController::class,'blogs'])->name('blogs');
+Route::get('/viewblogs/{id}',[PagesController::class,'viewblogs'])->name('viewblogs');
+
 
 
 

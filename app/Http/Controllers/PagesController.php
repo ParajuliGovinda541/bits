@@ -60,6 +60,12 @@ class PagesController extends Controller
         return view('blogs',compact('blogs'));
     }
 
+    public function viewblogs($id)
+    {
+        $blog=Blog::find($id);
+        return view('viewblogs',compact('blog'));
+    }
+
 
 
     public function visit()
