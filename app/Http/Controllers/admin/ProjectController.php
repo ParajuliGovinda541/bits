@@ -85,5 +85,12 @@ class ProjectController extends Controller
 
     }
 
+    public function destroy(Request $request)
+    {
+        $team=Project::find($request->dataid);
+        $team->delete();
+        return redirect(route('admin.project.index'))->with('success','Project Deleted Sucessfully');
+    }
+
 
 }
