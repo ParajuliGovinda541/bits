@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\Admin\ProjectController;
@@ -116,6 +117,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/product/{id}/edit',[ProductController::class,'edit'])->name('admin.product.edit');
     Route::delete('/product/destroy',[ProductController::class,'destroy'])->name('admin.product.destroy');
 
+    Route::get('/contacts',[ContactController::class,'index'])->name('admin.contacts.index');
+    Route::delete('/contacts/destroy',[ContactController::class,'destroy'])->name('admin.contacts.destroy');
+
+
+
 
 
 
@@ -130,7 +136,8 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
+// Route::get('/contacts', [ContactController::class,'store'])->name('admin.contacts');
+Route::post('/contact/store',[ContactController::class,'store'])->name('admin.contact.store');
 
 
 Route::get('/welcome',[PagesController::class,'welcome'])->name('welcome');

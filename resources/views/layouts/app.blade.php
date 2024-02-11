@@ -110,7 +110,7 @@
                     class="ri-news-fill"></i> Blogs</a>
             <a href="/product" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-news-fill"></i> Products</a>
-            <a href="/contact" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+            <a href="{{route('admin.contacts.index')}}" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-news-fill"></i> Contacts</a>
             <a href="/user" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-folder-user-fill"></i> Users</a>

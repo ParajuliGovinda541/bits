@@ -28,33 +28,34 @@
                     </p>
                 </div>
                 <div>
-                    <form action="">
+                    <form action="{{route('admin.contact.store')}}" method="POST">
+                        @csrf
                         <div class="grid grid-cols-2 my-5 gap-10  ">
                             <div class="">
                                 <label for="">Name *</label>
-                                <input type="text" placeholder=" Enter Your Name " class=" outline-indigo-600  px-2 py-1 w-full block border
+                                <input type="text" name="name" placeholder=" Enter Your Name " class=" outline-indigo-600  px-2 py-1 w-full block border
                          border-black rounded-lg">
                             </div>
                             <div class="">
-                                <label for="">Name *</label>
-                                <input type="text" placeholder=" Enter Your Name " class="  outline-indigo-600  px-2 py-1 w-full block border
+                                <label for="">Phone *</label>
+                                <input type="text" name="phone" placeholder=" Enter Your Name " class="  outline-indigo-600  px-2 py-1 w-full block border
                         border-black rounded-lg">
                             </div>
                         </div>
                         <div class="">
-                            <label for="">Subject *</label>
-                            <input type="text" placeholder=" Enter Your Name " class="  outline-indigo-600 px-2 py-1 w-full block border
+                            <label for="">Email *</label>
+                            <input type="email" name="email" placeholder=" Enter Your Name " class="  outline-indigo-600 px-2 py-1 w-full block border
                      border-black rounded-lg">
                         </div>
                         <div>
                             <label for="">Message *</label>
-                            <textarea name="" id="" cols="30" rows="10" class="  outline-indigo-600 px-2 py-1 w-full block border
+                            <textarea name="message" id="" cols="30" rows="10" class="  outline-indigo-600 px-2 py-1 w-full block border
                             border-black rounded-lg"></textarea>
                         </div>
                         <div class="mx-auto text-center mt-4">
-                            <a href=""
+                            <button type="submit"
                                 class="px-3 text-white py-2 text-center bg-indigo-700 rounded-xl hover:bg-indigo-600">Send
-                                Message</a>
+                                Message</button>
                         </div>
                     </form>
                 </div>
