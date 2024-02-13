@@ -30,18 +30,13 @@
                         <td>{{ $contact->id }}</td>
                         <td>{{ $contact->name }}</td>
                         <td>{{ $contact->phone }}</td>
-
                         <td>{{ $contact->email }}</td>
                         <td><div class="h-20 overflow-auto">{{ $contact->message }}</div></td>
                         <td>{{ $contact->message_date }}</td>
                         <td>
-
                             <a onclick="showDelete('{{ $contact->id }}')"
                                 class="bg-red-600 text-xl text-white px-1 py-1 rounded-lg cursor-pointer">Delete</a>
                         </td>
-
-
-
                     </tr>
                 @endforeach
 

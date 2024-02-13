@@ -115,8 +115,13 @@
             <a href="/user" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-folder-user-fill"></i> Users</a>
 
-            <a href="/logout" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
-                    class="ri-logout-circle-r-fill"></i> Logouts</a>
+            <form action="{{route('logout')}}"  method="POST">
+            @csrf
+
+            <button class="text-xl cursor-pointer hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+                class="ri-logout-circle-r-fill"></i> Logouts
+                </button> 
+                </form>
         </div>
         <div class=" p-1 w-full pl-60">
 

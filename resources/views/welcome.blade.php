@@ -191,7 +191,7 @@
                     <div class="swiper-wrapper">
                        @foreach ($testomonials as $testomonial)
                        <div class="swiper-slide my-5">
-                      
+
                         <div class="flex justify-center text-center">
                             <div class="justify-center text-center">
                                 <img class="h-40 w-40 object-cover mx-auto rounded-[100%]" src=" {{asset('images/testomonial/'.$testomonial->client_image)}}" alt="">
@@ -221,6 +221,67 @@
 
     </section>
     <!-- Testomonials ended -->
+
+
+
+
+
+
+
+
+    {{-- counter started --}}
+    <div style="background-image: url('{{ asset('/images/count.jpeg') }}')"
+    class="w-full  2xl:h-[24rem] xl:h-[20rem]  lg:h-[28rem] sm:h-[28rem] h-[32rem] text-center bg-cover bg-center bg-fixed relative">
+    <div class="absolute inset-0 bg-indigo-900 bg-opacity-50 flex items-center justify-center">
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-36 numbers1">
+            <div>
+                <div class="relative text-white">
+                    <span class="md:text-6xl text-4xl font-bold count1">53</span>
+                    <span class="md:text-3xl text-3xl font-bold absolute md:top-0 -top-2">+</span>
+                </div>
+                <p class="md:text-xl font-bold mt-2 text-white">Clients</p>
+            </div>
+
+            <div>
+                <div class="relative text-white">
+                    <span class="md:text-6xl text-4xl font-bold count1">80</span>
+                    <span class="md:text-3xl text-3xl font-bold absolute md:top-0 -top-2">+</span>
+                </div>
+                <p class="md:text-xl font-bold mt-2 text-white">Projects</p>
+            </div>
+
+
+            <div>
+                <div class="relative text-white">
+                    <span class="md:text-6xl text-4xl font-bold count1">1200</span>
+                    <span class="md:text-3xl text-3xl font-bold absolute md:top-0 -top-2">+</span>
+                </div>
+                <p class="md:text-xl font-bold mt-2 text-white">Hours Of Support</p>
+            </div>
+
+            <div>
+                <div class="relative text-white">
+                    <span class="md:text-6xl text-4xl font-bold count1">10</span>
+                    <span class="md:text-3xl text-3xl font-bold absolute md:top-0 -top-2">+</span>
+                </div>
+                <p class="md:text-xl font-bold mt-2 text-white">Hard Workers</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    {{-- counter ended --}}
+
+
+
+
+
+
+
 
 
     <!-- Slider main container -->
@@ -430,4 +491,29 @@
 
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var section1 = $('.numbers1').offset();
+        var hasEntered1 = false;
+        window.addEventListener('scroll', (e) => {
+            var shouldAnimate1 = (window.scrollY + window.innerHeight) >= section1.top;
+
+            if (shouldAnimate1 && !hasEntered1) {
+                hasEntered1 = true;
+
+                $('.count1').each(function() {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function(now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+            }
+        });
+     </script>
 @endsection

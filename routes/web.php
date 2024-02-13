@@ -120,6 +120,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/contacts',[ContactController::class,'index'])->name('admin.contacts.index');
     Route::delete('/contacts/destroy',[ContactController::class,'destroy'])->name('admin.contacts.destroy');
 
+    
+
 
 
 
