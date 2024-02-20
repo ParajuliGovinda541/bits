@@ -85,23 +85,23 @@
     <div class="flex">
         <div class="w-56 fixed h-screen bg-gray-600 shadow md:block hidden">
             <img src="{{ asset('images/logo.png') }}" class="w-full" alt="">
-            <a href="/dashboard" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+            <a href="{{route('dashboard')}}" class="@if(request()->routeIs('dashboard')) bg-blue-500 text-white @endif text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-dashboard-3-fill"></i> Dashboard</a>
-            <a href="/notice" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+            <a href="{{route('admin.notice.index')}}" class="@if(request()->routeIs('admin.notice.*')) bg-blue-500 text-white @endif text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-flag-fill"></i> Notice</a>
-            <a href="/banner" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+            <a href="{{route('admin.banner.index')}}" class="@if(request()->routeIs('admin.banner.*')) bg-blue-500 text-white @endif text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-flag-fill"></i> Banner</a>
-            <a href="/category" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+            <a href="{{route('admin.category.index')}}" class=" @if(request()->routeIs('admin.category.*')) bg-blue-500 text-white @endif text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-flag-fill"></i> Category</a>
-            <a href="/client" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+            <a href="{{route('admin.client.index')}}" class="@if(request()->routeIs('admin.client.*')) bg-blue-500 text-white @endif  text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-group-line"></i> Clients</a>
-            <a href="/team" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+            <a href="{{route('admin.team.index')}}" class="@if(request()->routeIs('admin.team.*')) bg-blue-500 text-white @endif text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                     class="ri-group-line"></i> Teams</a>
             <a href="{{ route('admin.testomonial.index') }}"
-                class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-group-line"></i>
+                class="@if(request()->routeIs('admin.testomonial.*')) bg-blue-500 text-white @endif text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-group-line"></i>
                 Testomonials</a>
             <a href="{{ route('admin.project.index') }}"
-                class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-group-line"></i>
+                class="@if(request()->routeIs('admin.project.*')) bg-blue-500 text-white @endif text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i class="ri-group-line"></i>
                 Projects</a>
 
             <a href="/service" class="text-xl hover:bg-slate-400 w-full block p-2 hover:text-white"><i
@@ -118,9 +118,9 @@
             <form action="{{route('logout')}}"  method="POST">
             @csrf
 
-            <button class="text-xl cursor-pointer hover:bg-slate-400 w-full block p-2 hover:text-white"><i
+            <button class="text-xl cursor-pointer text-left hover:bg-slate-400 w-full block p-2 hover:text-white"><i
                 class="ri-logout-circle-r-fill"></i> Logouts
-                </button> 
+                </button>
                 </form>
         </div>
         <div class=" p-1 w-full pl-60">

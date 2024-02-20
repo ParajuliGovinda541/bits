@@ -35,9 +35,9 @@
                     <td class="font-bold uppercase">{{$team->position }}</td>
 
                     <td><img src="{{asset('images/team/'.$team->team_image )}}" class="h-20" alt="" srcset=""></td>
-                    <td class="font-bold uppercase">{{$team->facebook }}</td>
-                    <td class="font-bold uppercase">{{$team->instagram }}</td>
-                    <td class="font-bold uppercase">{{$team->twitter }}</td>
+                    <td class=" text-sm font-bold uppercase">{{$team->facebook }}</td>
+                    <td class=" text-sm font-bold uppercase">{{$team->instagram }}</td>
+                    <td class=" text-sm font-bold uppercase">{{$team->twitter }}</td>
 
                     <td>
                         <a href="{{ route('admin.team.edit', $team->id) }}"

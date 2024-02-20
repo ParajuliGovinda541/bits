@@ -37,15 +37,13 @@ Route::get('/',[PagesController::class,'welcome'])->name('welcome');
 Route::get('/about',[PagesController::class,'about'])->name('about');
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
 
 
 
-    Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.index');
+    Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
 
 
@@ -120,7 +118,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/contacts',[ContactController::class,'index'])->name('admin.contacts.index');
     Route::delete('/contacts/destroy',[ContactController::class,'destroy'])->name('admin.contacts.destroy');
 
-    
+
 
 
 
@@ -147,6 +145,8 @@ Route::get('/about',[PagesController::class,'about'])->name('about');
 Route::get('/contact',[PagesController::class,'contact'])->name('contact');
 Route::get('/projects',[PagesController::class,'projects'])->name('projects');
 Route::get('/blogs',[PagesController::class,'blogs'])->name('blogs');
+Route::get('/products',[PagesController::class,'products'])->name('products');
+
 Route::get('/viewblogs/{id}',[PagesController::class,'viewblogs'])->name('viewblogs');
 
 

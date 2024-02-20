@@ -48,7 +48,7 @@ class PagesController extends Controller
         return view('projects',compact('projects'));
     }
 
-   
+
     public function service()
     {
         return view('service');
@@ -63,7 +63,16 @@ class PagesController extends Controller
     public function viewblogs($id)
     {
         $blog=Blog::find($id);
-        return view('viewblogs',compact('blog'));
+        $related= Blog::where('id','!=',$id)->orderBy('blog_date','desc')->get();
+        return view('viewblogs',compact('blog','related'));
+    }
+
+
+
+    public function products()
+    {
+        // $blog=Blog::find($id);
+        return view('products');
     }
 
 
