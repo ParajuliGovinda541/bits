@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Client;
 use App\Models\Notice;
+use App\Models\Product;
 use App\Models\Project;
 use App\Models\Team;
 use App\Models\Testomonial;
@@ -71,8 +72,8 @@ class PagesController extends Controller
 
     public function products()
     {
-        // $blog=Blog::find($id);
-        return view('products');
+        $products=Product::all();
+        return view('products',compact('products'));
     }
 
 
