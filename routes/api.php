@@ -17,6 +17,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/notices', [NoticeController::class, 'index']);
+Route::post('/notices/store', [NoticeController::class,'store']);
+Route::get('/notices/edit/{id}', [NoticeController::class,'edit']);
+Route::post('/notices/update/{id}', [NoticeController::class,'update']);
+Route::get('/notices/delete/{id}', [NoticeController::class,'destroy']);
+
+
+
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
