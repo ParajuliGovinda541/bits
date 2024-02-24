@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ClientController;
 use App\Http\Controllers\Api\NoticeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,15 @@ Route::post('/notices/store', [NoticeController::class,'store']);
 Route::get('/notices/edit/{id}', [NoticeController::class,'edit']);
 Route::post('/notices/update/{id}', [NoticeController::class,'update']);
 Route::get('/notices/delete/{id}', [NoticeController::class,'destroy']);
+
+
+
+Route::get('/clients', [ClientController::class, 'index']);
+Route::post('/clients/store', [ClientController::class,'store']);
+Route::get('/clients/edit/{id}', [ClientController::class,'edit']);
+Route::post('/clients/update/{id}', [ClientController::class,'update']);
+Route::get('/clients/delete/{id}', [ClientController::class,'destroy']);
+
 
 
 
