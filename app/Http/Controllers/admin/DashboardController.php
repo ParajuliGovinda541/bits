@@ -12,6 +12,7 @@ use App\Models\Testomonial;
 use App\Models\Visit;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class DashboardController extends Controller
 {
@@ -30,5 +31,17 @@ class DashboardController extends Controller
         $visitdate=Visit::where('visit_date','>=',$date)->pluck('visit_date');
         $visits= Visit::where('visit_date','>=',$date)->pluck('no_of_visits');
         return view("dashboard",compact("notices","banners","categories","clients","teams","testo","visits",'totalvisits','visitdate'));
+    }
+
+    public function sendMail()
+    {
+        $data=[
+            'name'=> 'Govinda',
+            'body'=> 'Hello',
+        ]
+        ;
+        Mail::send('email.testmail', $data, function ($message) {
+            $message->to('parajuligovinda541@gmail.com')->subject('Test Mail');
+        });
     }
 }

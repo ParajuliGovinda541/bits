@@ -45,6 +45,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
+    Route::get('/sendMail',[DashboardController::class,'sendMail'])->name('sendMail');
+
 
 
 

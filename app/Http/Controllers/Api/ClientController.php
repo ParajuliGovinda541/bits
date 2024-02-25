@@ -76,14 +76,14 @@ class ClientController extends Controller
             ]);
         }
 
-        public function destroy(Request $request, $id)
+        public function destroy(Request $request)
         {
             $client = Client::find($request->dataid);
             $client->delete();
             return response()->json([
-                'code'=> 200,
-                    'message'=> 'Deleted Sucessfully'
-                    ]);
-}
+            'code'=> 200,
+            'message'=> 'Deleted Sucessfully'
+            ]);
+    }
 }
 

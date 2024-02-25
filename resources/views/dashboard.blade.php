@@ -41,10 +41,10 @@ Dashboard
                 <h1 class="text-xl">Testomonial</h1>
                 <h1 class="text-4xl font-bold">{{$testo}}</h1>
             </div>
-            {{-- <div class="shadow-lg cursor-pointer bg-red-600 px-10 py-5 rounded-md flex justify-between">
-                <h1 class="text-xl">Visits</h1>
-                <h1 class="text-4xl font-bold">{{$visits}}</h1>
-            </div> --}}
+            <div class="shadow-lg cursor-pointer bg-red-600 px-10 py-5 rounded-md flex justify-between">
+                <a href="{{route('sendMail')}}">SendMail</a>
+
+            </div>
             <div class="shadow-lg cursor-pointer bg-blue-600 px-10 py-5 rounded-md flex justify-between">
                 <h1 class="text-xl">TotalVisit</h1>
                 <h1 class="text-4xl font-bold">{{$totalvisits}}</h1>
@@ -69,12 +69,12 @@ Dashboard
         </div>
 
 
-        
-          
+
+
           <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             const ctx = document.getElementById('myChart');
-          
+
             new Chart(ctx, {
               type: 'line',
               data: {
