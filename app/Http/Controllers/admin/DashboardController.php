@@ -35,13 +35,20 @@ class DashboardController extends Controller
 
     public function sendMail()
     {
-        $data=[
-            'name'=> 'Govinda',
-            'body'=> 'Hello',
-        ]
-        ;
-        Mail::send('email.testmail', $data, function ($message) {
-            $message->to('parajuligovinda541@gmail.com')->subject('Test Mail');
+        $useremail = 'parajuligovinda541@gmail.com';
+        $file = public_path('images/logo.png');
+        $data = [
+            'name' => 'Govinda Parajuli',
+            'body' => 'This is test mail from SkyFall Engineer .'
+        ];
+        Mail::send('email.testmail',$data, function($message) use ($useremail,$file) {
+            $message->to($useremail)
+                ->subject('This is test mail')
+                ->attach($file, [
+                    'as' => 'hello.png',
+                    'mime' => 'image/png',
+                ]);
         });
+        return back()->with('Sent Sucessfully');
     }
 }
